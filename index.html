@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Techcapital Co. - Web Services</title>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, intial-scale=1'>
+
+	<link rel='icon' type='image/png' href='tech-icon.png' size='16x16'>
+
+	<!--Stylesheets go here -->
+	<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">		
+	<link rel='stylesheet' href='css/main.css'>
+
+	
+	<!--External libraries go here -->
+	<script src='js/jquery-2.2.4.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+
+	<!--Main JS program goes here -->
+	<script>
+	$(document).ready(function(){
+
+		//This is to toggle the visibility of the break tag embeded in the footer whenever the screen size changes. This will ensure that the glyphicons and accompanying text display stacked on small screens and inline on larger
+		var viewport_width = $(window).width();
+
+		if(viewport_width <= 414){
+			$('footer br').addClass('vis').removeClass('hid');
+		}
+		
+		$(window).resize(function(){
+
+			let viewport_width = $(window).width();
+			
+			if(viewport_width <= 414){
+				$('footer br').addClass('vis').removeClass('hid');
+			}
+			else{
+				$('footer br').removeClass('vis').addClass('hid');
+			}
+		});
+
+		
+	}); //end ready()
+	</script>	
+
+
+</head>
+<body>
+
+<!--bootstrap container here -->
+<div class='container'>
+	
+	<!-- Start of first row container navbar -->
+	<div class='row'>
+		
+	<!-- Navigation-->
+		<div class='navbar navbar-default navbar-fixed-top navbar-inverse'>
+			<div class='container-fluid'>
+				<div class='navbar-header'>
+					<img src='images/tech-icon.png'class='logo'>
+					<a class='navbar-brand' href='#'>web.techspecial.co.za</a>
+
+					<!-- Toggleable button when screen size shrinks. -->
+					<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#mynavbar-content'>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+					</button>
+
+				</div> <!-- end navigation -->
+
+				<!-- Toggleable button content when collpased -->
+				<div class='collapse navbar-collapse' id='mynavbar-content'>
+					<ul class='nav navbar-nav float-reset' >
+						<li class='active dropdown'>
+							<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup="true" aria-expanded="false">Web Services</a>
+							<ul class='dropdown-menu'>
+								<li><a href='#support'>IT Support</a></li>
+								<li><a href='#training'>Specialized Web Services</a></li>
+								<li><a href='#webdev'>Web Development</a></li>
+								<li role='seperator' class='divider'></li>
+								<li><a href='https://techspecial.co.za' target='_blank'>Visit our Blog</a></li>
+							</ul>
+
+						</li>
+						
+						<li><a href='#contact'>Contact Us</a></li>
+						<li><a href='#about'>About Us</a></li>
+						
+					</ul>
+				</div><!-- Toggleable button content -->
+			</div> <!-- End container for navbar -->
+		</div>	<!-- End Navigation -->
+	
+		<div class='col-xs-12 cover-div'>
+
+			<img src='images/tech-logo1.png' class='cover-logo'>
+			<h1>At Your Service</h1>
+			<span></span>
+		</div> <!-- End Company Logo -->
+	</div>	
+	
+	<!-- row2 Containing the IT, Wordpress and Specialized serices picutes;-->
+	<div class='row snip-content'>	
+
+	
+		<div class='col-md-4 col-sm-6 col-xs-12 web-serv-list1 web-serv-list-border' title='Looking for an IT Guy?'>
+			<h3>Technical Support</h3>
+			<a href='#support'><img src='images/tech-sp.png' class='wp-logo'></a>
+
+		</div>
+
+		<div class='col-md-4 col-sm-6 col-xs-12 web-serv-list2 web-serv-list-border' title='Website for you or business?'>
+			
+			<h3>Website Development</h3>
+			<a href='#webdev'><img class='wp-logo' src='images/wp.png'></a>
+		</div>
+
+		<div class='col-md-4 col-sm-12 col-xs-12 web-serv-list3 web-serv-list-border' title='For power clients'>
+			 
+			<h3>Specialized Web Services</h3>
+			<a href='#training'><img src='https://iteradon.co.za/img/programming_code_2.png' class='wp-logo'></a>
+
+
+		</div>
+	
+
+	</div> <!-- end row 2 -->
+
+	<!-- row 3, site content -->
+	<div class='row'>
+		<div id='support' class='col-xs-12 web-serv web-serv1 content-header-para'>
+			<h3 class='content-header'>IT Technical Support</h3>
+			<p>Do you desperately need an 'IT Guy' or having difficulties with your small business' IT infrastructure? Talk to us, we can help</p>
+			<ul>
+				<li>Remote assistance at the comfort of your home</li>
+				<li>Hardware Troubleshooting</li>
+				<li>Wireless Connectivity Setup</li>
+				<li>Any other individual requirements, talk to us, we can help</li>
+			</ul>
+			<a href='https://wa.me/27661393463'><input class='chat-btn btn1' type='button' value="Let's Chat !"></a>
+		</div>
+
+		<div class='col-xs-12 web-serv web-serv2 content-header-para'>
+			<h3 id='webdev' class='content-header'>Website Development</h3>
+			<p>Are you looking to build your own website quickly ? Or perhaps looking to put your business into the digital universe ? (If you haven't already, what are you waiting for !?) </p>
+			<p>With a solution implemented using WordPress, we can get it done for you. Fast</p>
+			<ul>
+				<li>Selection and Implementation of a design</li>
+				<li>Domain name registration</li>
+				<li>Web hosting - Taking your website live</li>
+				<li>Web Master services for your newly created website (if required)</li>
+			</ul>
+			<a href='https://wa.me/27661393463'><input class='chat-btn btn2' type='button' value="Let's Chat !"></a>
+		</div>
+
+		<div class='col-xs-12 web-serv web-serv3 content-header-para'>
+			<h3 id='training' class='content-header'>Specialized Web Services</h3>
+			
+			<p>Are you looking for specialized web services ? 
+			</p>
+			<p>Techcapital Co. offers the following services for individuals and business requiring information and data processing:</p>
+			<!-- img src='images/itera-logo.png' -->
+			<ul>
+				<li>Data Processing</li>
+				<li>Web Scraping</li>
+				<li>Process Automation</li>
+				<li>Data Extraction</li>
+			</ul>
+			<a href='https://wa.me/27661393463' ><input class='chat-btn btn3' type='button' value="Let's Chat !"></a>
+
+		</div>
+
+		<!-- footer goes here -->
+		<div class='col-xs-12 footer' id='contact'>
+			<footer>
+				<p>CONTACT US</p>
+				<span class='glyphicon glyphicon-phone'></span>
+				<span class='glyph-pad'>066 139 3463</span><br class='hid'>
+				<span class='glyphicon glyphicon-envelope en'></span>
+				<span class='glyph-pad'>info@techspecial.co.za</span>
+				<br class='hid'>
+				<a title='Start a WhatsApp conversation with us'href='https://wa.me/27661393463' class='block-reset'><img src='images/whatsapp.png'>
+				<span class='glyph-pad'>066 139 3463</span></a>
+
+				<p class='copyright'>Copyright &#169 Protected.</p>
+				<img src='images/tech-icon.png'>
+			</footer>
+		</div>
+	</div><!-- end row 3 -->
+
+
+</div>
+<!-- end bootstrap container -->
+
+
+
+</body>
+</html>
+
+
+
+
+
